@@ -1,0 +1,29 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="primary">
+    <ion-buttons slot="end">
+      <ion-button (click)="fechar()">Fechar</ion-button>
+    </ion-buttons>
+    <ion-title>
+      LisTV
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title color="secondary">Adicionar</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-item>
+        <ion-label position="stacked">Filme ou série</ion-label>
+        <ion-input value="textoAdd" [(ngModel)]="textoAdd"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="stacked">Quando assistir</ion-label>
+        <ion-datetime [(ngModel)]="dataAssistir" doneText="OK" cancelText="Cancelar" displayFormat="DD/MM/YYYY" placeholder="Selecione o dia"></ion-datetime>
+      </ion-item>
+    </ion-card-content>
+    <ion-button expand="block" (click)="adicionar()" color="secondary">OK</ion-button>
+  </ion-card>
+</ion-content>
